@@ -1,0 +1,13 @@
+Leicester City
+9,9,12,1,14
+Kasper Schmeichel,GK,8 8 7
+Ricardo Pereira,RB,7 8 6
+Jonny Evans,CB,6 7 5
+Caglar Soyuncu,CB,7 7 5
+Ben Chilwell,LB,7 7 5
+Wilfred Ndidi,CDM,8 7 5
+Youri Tielemans,CM,6 8 8
+Dennis Praet,CM,6 8 6
+James Maddison,CAM,5 8 8
+Kelechi Iheanacho,ST,4 7 8
+Jamie Vardy,ST,4 7 9

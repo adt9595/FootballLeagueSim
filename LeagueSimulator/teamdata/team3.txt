@@ -1,0 +1,13 @@
+Brighton & Hove
+17,15,20,20,20
+Mathew Ryan,GK,81 83 82
+Montoya,RB,73 71 61
+Lewis Dunk,CB,78 55 40
+Shane Duffy,CB,78 51 45
+Bernardo,LB,76 62 49
+Aaron Mooy,CM,69 77 69
+Davy Propper,CM,67 73 70
+Leandro Trossard,RW,30 76 80
+Pascal Gross,CAM,60 82 72
+Jose Izquierdo,LW,38 67 69
+Glenn Murray,ST,42 61 78

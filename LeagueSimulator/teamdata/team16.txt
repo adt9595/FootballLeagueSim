@@ -1,0 +1,13 @@
+Tottenham
+4,3,2,3,5
+Hugo Lloris,GK,9 8 4
+Serge Aurier,RB,7 6 5
+Toby Alderweireld,CB,8 8 3
+Jan Vertonghen,CB,8 6 5
+Danny Rose,LB,7 5 6
+Tanguy N'Dombele,CM,6 9 7
+Moussa Sissoko,CM,7 7 6
+Gio Lo Celso,RW,4 7 8
+Dele Alli,CAM,4 8 8
+Heung Min Son,LW,4 7 9
+Harry Kane,ST,6 8 10

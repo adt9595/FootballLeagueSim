@@ -1,0 +1,13 @@
+Chelsea
+3,5,1,10,1
+Kepa Arrizabalaga,GK,9 7 5
+Reece James,RB,7 6 4
+Antonio Rudiger,CB,8 6 5
+Kurt Zouma,CB,7 7 4
+Marcos 'Killer' Alonso,LB,7 6 7
+N'Golo Kante,CM,9 8 6
+Mateo Kovacic,CM,7 8 6
+Willian,RW,4 7 8
+Mason Mount,CAM,4 8 7
+Christian Pulisic,LW,5 7 8
+Tammy Abraham,ST,4 7 8

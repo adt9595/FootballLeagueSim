@@ -1,0 +1,13 @@
+Aston Villa
+20,20,20,20,17
+Tom Heaton,GK,79 82 74
+Frederic Guilbert,RB,76 66 47
+Bjorn Engels,CB,75 61 44
+James Chester,CB,74 58 34
+Matt Targett,LB,70 69 42
+Marvelous Nakamba,CDM,75 63 49
+Conor Hourihane,CM,65 75 69
+Jack Grealish,RW,41 74 66
+John McGinn,CAM,70 71 66
+Trezeguet,LW,35 73 74
+Wesley,ST,41 72 76

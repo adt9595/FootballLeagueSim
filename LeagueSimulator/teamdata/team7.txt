@@ -1,0 +1,13 @@
+Everton
+8,8,7,11,11
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0

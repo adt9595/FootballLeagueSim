@@ -1,0 +1,13 @@
+Wolves
+7,20,20,20,20
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0

@@ -1,0 +1,13 @@
+Newcastle
+13,10,20,18,15
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0
+Player,GK,0 0 0

@@ -1,0 +1,13 @@
+Manchester Utd
+6,2,6,5,4
+David de Gea,GK,9 7 5
+Aaron Wan-Bissaka,RB,8 8 5
+Victor Lindelof,CB,7 7 4
+Harry Maguire,CB,8 7 4
+Luke Shaw,LB,7 7 5
+Scott McTominay,CM,7 7 5
+Fred,CM,6 7 6
+Juan Mata,RW,6 8 7
+Jesse Lingard,CAM,5 6 7
+Marcus Rashford,LW,5 7 8
+Anthony Martial,ST,4 7 8

@@ -1,0 +1,13 @@
+Bournemouth
+14,12,9,16,20
+Asmir Begovic,GK,76 75 72
+Adam Smith,RB,75 71 60
+Nathan Ake,CB,81 70 53
+Steve Cook,CB,78 55 34
+Simon Francis,LB,75 67 44
+David Brooks,RM,48 75 71
+Jefferson Lerma,CDM,78 72 64
+Lewis Cook,CM,66 75 63
+Ryan Fraser,LM,46 78 73
+Callum Wilson,ST,39 67 78
+Joshua King,ST,38 69 79

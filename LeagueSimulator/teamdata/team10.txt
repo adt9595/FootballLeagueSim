@@ -1,0 +1,13 @@
+Manchester City
+1,1,3,4,2
+Ederson Moraes,GK,8 9 6
+Kyle Walker,RB,7 8 6
+Nicolas Otamendi,CB,7 7 4
+John Stones,CB,8 6 4
+Benjamin Mendy,LB,6 9 6
+Kevin De Bruyne,CM,5 10 8
+Fernandinho,CM,8 8 6
+David Silva,CM,5 9 7
+Bernardo Silva,RW,4 8 8
+Sergio Aguero,ST,5 8 10
+Raheem Sterling,LW,4 9 9
