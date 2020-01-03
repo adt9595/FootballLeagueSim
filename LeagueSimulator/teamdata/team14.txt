@@ -1,13 +1,15 @@
 Sheffield Utd
 20,20,20,20,20
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Dean Henderson,GK,75 76 72
+Enda Stevens,RB,72 63 45
+Phil Jagielka,CB,77 57 44
+John Egan,CB,73 50 49
+Ben Osborn,LB,64 70 64
+Luke Freeman,RM,52 72 67
+John Lundstram,CM,73 72 68
+Oliver Norwood,CM,70 78 66
+Ravel Morrison,LM,50 76 70
+Billy Sharp,ST,42 62 74
+Oliver McBurnie,ST,34 57 71
+
+

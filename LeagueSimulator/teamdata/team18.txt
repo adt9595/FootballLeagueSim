@@ -1,13 +1,13 @@
 West Ham
 10,13,11,7,12
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Lukasz Fabianski,GK,80 84 70
+Arthur Masuaku,RB,70 76 66
+Fabian Balbuena,CB,80 52 40
+Issa Diop,CB,79 54 40
+Aaron Cresswell,LB,77 75 64
+Declan Rice,CDM,77 66 42
+Jack Wilshere,CM,63 79 65
+Andriy Yarmolenko,RW,42 79 80
+Pablo Fornals,CAM,71 79 76
+Felipe Anderson,LW,55 84 79
+Sebastien Haller,ST,51 67 81

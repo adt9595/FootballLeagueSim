@@ -1,13 +1,13 @@
 Newcastle
 13,10,20,18,15
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Martin Dubravka,GK,77 81 81
+DeAndre Yedlin,RB,73 67 52
+Fabian Schar,CB,80 71 66
+Jamaal Lascelles,CB,79 51 28
+Jetro Willems,LB,71 76 62
+Jonjo Shelvey,CM,62 79 72
+Isaac Hayden,CDM,74 64 55
+Ki-Sung Yeung,CM,64 79 72
+Allan Saint-Maximin,RW,23 74 75
+Joelinton,ST,43 61 76
+Miguel Almiron,GK,48 76 74

@@ -1,13 +1,13 @@
 Wolves
 7,20,20,20,20
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Rui Patricio,GK,84 82 77
+Matt Doherty,RB,79 76 71
+Willy Boly,CB,78 62 35
+Conor Coady,CB,78 72 59
+Jonny,LB,78 73 56
+Ruben Neves,CM,70 82 74
+Leander Dendoncker,CDM,78 77 72
+Adama Traore,RW,45 83 75
+Joao Moutinho,CAM,71 84 75
+Diogo Jota,LW,53 78 78
+Raul Jimenez,ST,47 73 78

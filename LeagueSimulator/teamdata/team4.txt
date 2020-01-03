@@ -1,13 +1,13 @@
 Burnley
 15,7,16,20,19
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Nick Pope,GK,78 79 75
+Matthew Lowton,RB,75 73 61
+James Tarkowski,CB,79 66 45
+Ben Mee,CB,79 58 42
+Charlie Taylor,LB,75 71 54
+Johann Gudmundsson,RM,61 78 74
+Danny Drinkwater,CM,71 76 66
+Ashley Westwood,CM,74 79 60
+Robbie Brady,LM,66 76 72
+Ashley Barnes,ST,47 68 78
+Chris Wood,ST,40 59 76

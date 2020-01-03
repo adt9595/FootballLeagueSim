@@ -1,13 +1,13 @@
 Manchester Utd
 6,2,6,5,4
-David de Gea,GK,9 7 5
-Aaron Wan-Bissaka,RB,8 8 5
-Victor Lindelof,CB,7 7 4
-Harry Maguire,CB,8 7 4
-Luke Shaw,LB,7 7 5
-Scott McTominay,CM,7 7 5
-Fred,CM,6 7 6
-Juan Mata,RW,6 8 7
-Jesse Lingard,CAM,5 6 7
-Marcus Rashford,LW,5 7 8
-Anthony Martial,ST,4 7 8
+David de Gea,GK,90 92 81
+Aaron Wan-Bissaka,RB,80 63 50
+Victor Lindelof,CB,82 72 50
+Harry Maguire,CB,81 64 53
+Luke Shaw,LB,80 75 54
+Paul Pogba,CM,66 86 81
+Nemanja Matic,CDM,80 77 68
+Juan Mata,RW,36 83 74
+Jesse Lingard,CAM,58 76 78
+Anthony Martial,LW,41 72 81
+Marcus Rashford,ST,45 73 82

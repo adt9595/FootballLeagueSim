@@ -1,13 +1,13 @@
 Crystal Palace
 12,11,14,15,10
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Guaita,GK,80 80 77
+Joel Ward,RB,76 66 52
+Bakary Sakho,CB,78 65 33
+James Tomkins,CB,80 57 32
+Patrick van Aanholt,LB,72 70 68
+Andros Townsend,RM,38 75 77
+Luka Milivojevic,CDM,78 76 67
+Max Meyer,CM,65 79 62
+Jeffrey Schlupp,LM,69 66 67
+Wilfried Zaha,ST,27 76 80
+Andre Ayew,ST,45 70 74

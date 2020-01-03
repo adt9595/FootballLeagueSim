@@ -1,13 +1,13 @@
 Liverpool
 2,4,4,8,6
-Alisson,GK,8 9 7
-Joe Gomez,RB,8 7 5
-Dejan Lovren,CB,7 6 4
-Virgil Van Dijk,CB,10 7 5
-Andy Robertson,LB,7 9 6
-Naby Ketia,CM,6 9 7
-Jordan Henderson,CM,7 8 4
-James Milner,CM,8 7 5
-Mohamed Salah,RW,5 9 9
-Roberto Firmino,ST,6 9 8
-Sadio Mane,LW,4 9 9
+Alisson,GK,85 89 85
+Trent Alexander-Arnold,RB,78 82 62
+Joel Matip,CB,83 68 46
+Virgil Van Dijk,CB,90 70 60
+Andy Robertson,LB,80 77 62
+Fabinho,CDM,85 78 69
+Georginio Wijnaldum,CM,76 78 73
+Jordan Henderson,CM,78 81 68
+Mohamed Salah,RW,45 81 86
+Roberto Firmino,ST,61 81 82
+Sadio Mane,LW,44 77 84

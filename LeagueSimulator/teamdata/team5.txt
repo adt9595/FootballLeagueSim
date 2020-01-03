@@ -1,13 +1,13 @@
 Chelsea
 3,5,1,10,1
-Kepa Arrizabalaga,GK,9 7 5
-Reece James,RB,7 6 4
-Antonio Rudiger,CB,8 6 5
-Kurt Zouma,CB,7 7 4
-Marcos 'Killer' Alonso,LB,7 6 7
-N'Golo Kante,CM,9 8 6
-Mateo Kovacic,CM,7 8 6
-Willian,RW,4 7 8
-Mason Mount,CAM,4 8 7
-Christian Pulisic,LW,5 7 8
-Tammy Abraham,ST,4 7 8
+Kepa Arrizabalaga,GK,84 85 86
+Cesar Azpilicueta,RB,85 77 55
+Antonio Rudiger,CB,82 67 43
+Kurt Zouma,CB,78 59 51
+Marcos 'Killer' Alonso,LB,79 79 73
+N'Golo Kante,CDM,87 77 65
+Mateo Kovacic,CM,67 81 68
+Willian,RW,49 80 78
+Ross Barkley,CAM,56 77 73
+Pedro,LW,43 77 77
+Olivier Giroud,ST,42 71 81

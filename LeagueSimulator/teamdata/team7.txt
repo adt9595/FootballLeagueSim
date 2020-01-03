@@ -1,13 +1,13 @@
 Everton
 8,8,7,11,11
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Jordan Pickford,GK,82 86 87
+Seamus Coleman,RB,79 73 65
+Yerry Mina,CB,78 55 54
+Michael Keane,CB,80 62 49
+Lucas Digne,LB,80 79 69
+Richarlison,RM,45 72 77
+Gylfi Sigurdsson,CAM,57 84 81
+Andre Gomes,CDM,73 78 71
+Bernard,LM,38 77 77
+Cenk Tosun,ST,36 66 77
+Dominic Calvert-Lewin,ST,38 63 73

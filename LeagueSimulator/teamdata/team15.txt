@@ -1,13 +1,13 @@
 Southampton
 16,17,8,6,7
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
-Player,GK,0 0 0
+Angus Gunn,GK,76 79 70
+Cedric,RB,73 70 66
+Jannik Vestergaard,CB,80 61 49
+Jan Bednarek,CB,78 52 22
+Ryan Bertrand,LB,76 70 53
+Nathan Redmond,RM,32 75 73
+James Ward-Prowse,CM,62 85 71
+Pierre Emile Hojbjerg,CM,73 74 70
+Sofiane Boufal,LM,35 76 68
+Danny Ings,ST,32 67 74
+Shane Long,ST,36 61 72
