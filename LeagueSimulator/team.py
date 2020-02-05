@@ -34,8 +34,6 @@ class Team:
         self.players = []
         self.substitutes = []
         self.previousFinishes = []
-        
-        self.reset()
         if(path):
             self.loadData(path)
         else:
@@ -43,15 +41,18 @@ class Team:
             print("Players: ")
             for i in range(11):
                 print(self.players[i].name)
+        self.initialAttack = sum([player.attributes[2] for player in self.players])
+        self.initialDefence = sum([player.attributes[0] for player in self.players])
+        self.reset()  
+        self.setForm()
         self.setGoalProbabilities()
-        self.attack = sum([player.attributes[2] for player in self.players])
-        self.defence = sum([player.attributes[0] for player in self.players])
+        
         
     def setGoalProbabilities(self):
         self.goalProbabilities = [player.goalProbability for player in self.players]
         self.totalProbabilities = sum(self.goalProbabilities)
         self.goalProbabilities = [player.goalProbability / self.totalProbabilities for player in self.players]
-    
+        
     def reset(self):
         self.points = 0
         self.goals = [0,0]
@@ -66,11 +67,13 @@ class Team:
         self.winStreak = 0
         self.loseStreak = 0
         
-        self.baseForm = 40
-        self.formLimitUpper = self.baseForm + 30
-        self.formLimitLower = self.baseForm
+        self.baseForm = 22
+        self.formLimitUpper = self.baseForm + 25
+        self.formLimitLower = self.baseForm - 4
         
-        self.setForm()
+        self.attack = self.initialAttack
+        self.defence = self.initialDefence
+
     
     
     def setName(self,name):
@@ -78,7 +81,7 @@ class Team:
         
     def setForm(self):
         prevForm = int(round((weightedSum(self.previousFinishes,0.5) / weightedSum([20,20,20,20,20],0.5))))
-        previousFinishFactor = 18
+        previousFinishFactor = 25
         
         self.form = self.baseForm + (previousFinishFactor * prevForm)
     
@@ -94,8 +97,14 @@ class Team:
                 
             self.results[0] += 1
             self.points += 3
-            if self.form > self.formLimitLower:
-                self.form -= random.randint(1,3)
+            if self.form > self.formLimitLower and self.form < (self.formLimitLower + self.formLimitUpper)//2 :
+                self.form += random.randint(-2,-1)
+            elif self.form >= (self.formLimitLower + self.formLimitUpper)//2 and self.form < self.formLimitUpper :
+                self.form += random.randint(-3,-1)
+            elif self.form >= self.formLimitUpper:
+                self.form += random.randint(-4,-2)
+            
+            
         # draw
         elif index == 1:
             self.winStreak = 0
@@ -106,13 +115,13 @@ class Team:
             self.results[1] += 1
             self.points += 1
             if self.form < self.formLimitLower: 
-                self.form -= random.randint(-2,1)
-            elif self.form >= self.formLimitLower and self.form < (self.formLimitLower + self.formLimitUpper)/2 :
-                self.form -= random.randint(-1,2)
-            elif self.form >= (self.formLimitLower + self.formLimitUpper)/2 and self.form < self.formLimitUpper :
-                self.form -= random.randint(0,3)
-            elif self.form >= self.formLimitUpper:
-                self.form -= random.randint(0,3)
+                self.form += random.randint(1,2)
+            elif self.form >= self.formLimitLower and self.form < (self.formLimitLower + self.formLimitUpper)//2 :
+                self.form += random.randint(-1,1)
+            elif self.form >= (self.formLimitLower + self.formLimitUpper)//2 and self.form <= self.formLimitUpper :
+                self.form += random.randint(-2,0)
+            elif self.form > self.formLimitUpper:
+                self.form += random.randint(-2,-1)
         # loss
         elif index == 2:
             self.winStreak = 0
@@ -121,11 +130,20 @@ class Team:
             if self.loseStreak > self.topLoseStreak:
                 self.topLoseStreak = self.loseStreak
             self.results[2] += 1
-            if self.form < self.formLimitUpper:
+            if self.form <= self.formLimitLower: 
+                self.form += random.randint(2,3)
+            elif self.form > self.formLimitLower and self.form < (self.formLimitLower + self.formLimitUpper)//2 :
                 self.form += random.randint(1,3)
+            elif self.form >= (self.formLimitLower + self.formLimitUpper)/2 and self.form < self.formLimitUpper :
+                self.form += random.randint(1,2)
+
+
+                
         self.changePlayerStats(index)
         self.topScorer = max([player.goals for player in self.players])
-        self.attack
+        self.attack = sum([player.attributes[2] for player in self.players])
+        self.defence = sum([player.attributes[0] for player in self.players])
+        self.setGoalProbabilities()
         
     def increaseGoals(self,index):
         if(index < len(self.goals)):
@@ -167,7 +185,6 @@ class Team:
             self.setName(teamData.readline())
             tempData = teamData.readline().split(",")
             self.previousFinishes = [int(x) for x in tempData]
-            self.setForm()
             
             for i in range(1,12):
                 tempData = teamData.readline()

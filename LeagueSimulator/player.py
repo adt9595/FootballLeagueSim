@@ -9,23 +9,26 @@ position - String, position of player
 attributes - Array, list of attributes 
             (defending,passing,shooting) / (stopping, reactions, kicking)
 """    
+import random
 
 class Player:
     def __init__(self,name,position,attributes):
         self.name = name
         self.position = position
         self.attributes = self.formatAttributes(attributes)
-
+        
+        # Goalkeepers can score too!
         if self.position == "GK":
-            self.goalProbability = 0.0000001
+            self.goalProbability = 0.000001
         else:
             self.goalProbability = self.attributes[2] * positionMultipliers[self.position][2]
-        self.overallRating = 0
+            
         self.reset()
     
     def reset(self):
         self.goals = 0
-        self.setRating()
+        self.overallRating = sum(self.attributes)     
+        self.isSuspended = False
     
     def formatAttributes(self,attributes):
         attributes = attributes.split(' ')
@@ -34,11 +37,9 @@ class Player:
             attributes[i] = float(attributes[i]) * positionMultipliers[self.position][i]
         return attributes
     
-    def setRating(self):
-        self.overallRating = sum(self.attributes)     
-    
     def scoreGoal(self):
         self.goals += 1
+        self.goalProbability *= random.uniform(1.01, 1.04)
         
 # Attribute multipliers based on position
 positionMultipliers = {

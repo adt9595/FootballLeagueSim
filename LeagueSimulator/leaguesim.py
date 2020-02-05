@@ -14,6 +14,7 @@ import math
 import matplotlib.pyplot as plt
 from league import League
 from team import Team
+from match import Match
 
 
 #pygame.init()
@@ -85,38 +86,41 @@ def plotFigure(data,stepsize):
         
 
 teams = []
-#averages = []
-#stepsize = 0.004
+averages = []
+stepsize = 0.004
 
 # Populate league
-while(True):
-    isCustomTeam = input("Add your own team? (y/n) ")
-    if isCustomTeam == "y":
-        for i in range(19):
-            teams.append(Team('teamdata/team{0}.txt'.format(i)))
-        teams.append(Team())
-        break
-    elif isCustomTeam == "n":
-        for i in range(20):
-            teams.append(Team('teamdata/team{0}.txt'.format(i)))
-        break
-    else:
-        print("Not a valid response")
+#while(True):
+#    isCustomTeam = input("Add your own team? (y/n) ")
+#    if isCustomTeam == "y":
+#        for i in range(19):
+#            teams.append(Team('teamdata/team{0}.txt'.format(i)))
+#        teams.append(Team())
+#        break
+#    elif isCustomTeam == "n":
+#        for i in range(20):
+#            teams.append(Team('teamdata/team{0}.txt'.format(i)))
+#        break
+#    else:
+#        print("Not a valid response")
+        
+for i in range(20):
+    teams.append(Team('teamdata/team{0}.txt'.format(i)))
     
 
 
 # Run multiple leagues with varying team rating parameters
 #for i in range(25):
-prem = League('Premier League',teams)
-    #prem = League('Premier League',teams,0.0 + (stepsize * i),numIterations=100)
-    #averages.append(prem.avg)
+prem = League('Premier League',teams,teamDeltaFactor=3)
+#    prem = League('Premier League',teams,teamDeltaFactor=0.0 + (stepsize * i),numIterations=1)
+#    averages.append(prem.avg)
 #plotFigure(averages,stepsize)
     
-#testgame = Match(teams[6],teams[19],verbose=True)
+#Match(teams[10],teams[19],verbose=True)
 
 
 """
-REAL STATS:
+Stats for premier league 92/93 -> 18/19:
     Champion points avg: 87.074
     Champion points dev: 6.063
 """
