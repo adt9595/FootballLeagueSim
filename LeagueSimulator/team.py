@@ -68,7 +68,7 @@ class Team:
         self.loseStreak = 0
         
         self.baseForm = 22
-        self.formLimitUpper = self.baseForm + 25
+        self.formLimitUpper = self.baseForm + 30
         self.formLimitLower = self.baseForm - 4
         
         self.attack = self.initialAttack
@@ -81,13 +81,14 @@ class Team:
         
     def setForm(self):
         prevForm = int(round((weightedSum(self.previousFinishes,0.5) / weightedSum([20,20,20,20,20],0.5))))
-        previousFinishFactor = 25
+        previousFinishFactor = 20
         
         self.form = self.baseForm + (previousFinishFactor * prevForm)
     
     def setResult(self,index):
         # win
         if index == 0:
+            self.loseStreak = 0
             self.winStreak += 1
             self.unbeatenStreak += 1
             if self.winStreak > self.topWinStreak:
@@ -108,6 +109,7 @@ class Team:
         # draw
         elif index == 1:
             self.winStreak = 0
+            self.loseStreak = 0
             self.unbeatenStreak += 1
             if self.unbeatenStreak > self.topUnbeatenStreak:
                 self.topUnbeatenStreak = self.unbeatenStreak

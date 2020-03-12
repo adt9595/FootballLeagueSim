@@ -6,13 +6,13 @@ Created on Mon Jan 13 17:12:07 2020
 Stores league information
 name - String, name of league
 teams - Array, list of teams
-teamDeltaFactor - Float, ...
-numIterations - Int, number of iterations to run
+teamDeltaFactor - Float, regularization parameter for individual player stats
+numIterations - Int, number of league iterations to run
+verbose - Boolean, whether or not to print table
 """
 
 import random
 import math
-from itertools import permutations
 from match import Match
 
 ### Helper functions ################################
@@ -35,7 +35,8 @@ def stddev(x):
 #####################################################
 
 class League:
-    def __init__(self,name,teams,teamDeltaFactor=3,numIterations=1,verbose=True):
+    def __init__(self,name,teams,teamDeltaFactor,numIterations=1,verbose=True):
+        self.generateRoundRobin()
         self.name = name
         self.teams = teams
         self.numIterations = numIterations
@@ -47,37 +48,47 @@ class League:
         
 
     def reset(self):
-        self.schedule = list(permutations([i for i in range(self.numTeams)],2))
-        random.shuffle(self.schedule)
-        self.schedule = self.splitSchedule(self.schedule)
+        self.schedule = self.generateRoundRobin()
         self.topScorers = []
         if self.numIterations > 1:
             self.verbose = False
         self.gamesPlayed = 0
         for team in self.teams:
             team.reset()
-    
-    # Sorts schedule into unique, week-by-week fixtures
-    def splitSchedule(self,fixtures):
+
+    # Populate schedule using a randomly shuffled double round-robin algorithm
+    def generateRoundRobin(self):
         sortedSchedule = []
-        numWeeks = (self.numTeams * 2) - 2
-        for i in range(numWeeks):
-            usedTeams = []
-            week = []
-            for fixture in self.schedule:
-                if (fixture[0] in usedTeams) or (fixture[1] in usedTeams):
-                    continue
-                else:
-                    week.append(fixture)
-                    usedTeams.extend([fixture[0],fixture[1]])
-                    self.schedule.remove(fixture)
-            sortedSchedule.append(week)
+        # First pass
+        matches = [[1,2,3,4,5,6,7,8,9,10],[20,19,18,17,16,15,14,13,12,11]]
+        sortedSchedule.append(list(zip(matches[0],matches[1])))
+        for i in range(2*len(matches[0])-2):
+            currentMatches = [x[:] for x in matches]
+            matches[0][1] = currentMatches[1][0]
+            for j in range(1,9):
+                matches[0][j+1] = currentMatches[0][j]
+            matches[1][9] = currentMatches[0][9]
+            for j in range(1,10):
+                matches[1][j-1] = currentMatches[1][j]
+            sortedSchedule.append(list(zip(matches[0],matches[1])))
+        # Second pass
+        matches = [[20,19,18,17,16,15,14,13,12,11],[1,2,3,4,5,6,7,8,9,10]]
+        sortedSchedule.append(list(zip(matches[0],matches[1])))
+        for i in range(2*len(matches[0])-2):
+            currentMatches = [x[:] for x in matches]
+            matches[0][0] = currentMatches[1][1]
+            for j in range(0,9):
+                matches[0][j+1] = currentMatches[0][j]
+            matches[1][9] = currentMatches[0][9]
+            for j in range(2,10):
+                matches[1][j-1] = currentMatches[1][j]
+            sortedSchedule.append(list(zip(matches[0],matches[1])))
+        random.shuffle(sortedSchedule)
         return sortedSchedule
     
     def getTopScorers(self):
         players = []
         for i in range(len(self.teams)):
-            #players = self.teams[i].players
             for j in range(11):
                 players.append(self.teams[i].players[j])
         playersSorted = sorted(players,key=lambda x: x.goals,reverse = True)
@@ -85,13 +96,13 @@ class League:
         return topScorers
     
     def getTable(self):
-        # First, sort teams by points
+        # Sort teams by points
         self.teams = sorted(self.teams,key=lambda x: (x.points,x.goalDifference), reverse = True)
         self.topScorers = self.getTopScorers()
         if self.verbose:
             # Print table
             table = "{0:3}|{1:2}|{2:2}|{3:2}|{4:2}|{5:2}|{6:2}|{7:2}|{8:2}"
-            print(f"{self.name.capitalize()} TABLE:")
+            print(f"{self.name.upper()} TABLE:")
             print(table.format("Pos ","Pl","W","D","L","GF","GA","GD","Pts"))
             for i in range(len(self.teams)):
                 tm = self.teams[i]
@@ -120,15 +131,13 @@ class League:
                     if fixture[0] == fixture[1]:
                         continue
                     else:
-                        Match(self.teams[fixture[0]],self.teams[fixture[1]])
-                        self.gamesPlayed += 1
+                        Match(self.teams[fixture[0]-1],self.teams[fixture[1]-1],teamDeltaFactor = self.teamDeltaFactor)
                 self.gamesPlayed = week + 1
-                #self.getTable()
-                #input("Press ENTER to continue")
-            
             self.getTable()
             winner = self.teams[0].points
             winningPoints.append(winner)
+            
+            # Update streaks
             winStreak = max([team.topWinStreak for team in self.teams])
             unbeatenStreak = max([team.topUnbeatenStreak for team in self.teams])
             loseStreak = max([team.topLoseStreak for team in self.teams])
@@ -139,14 +148,13 @@ class League:
             
             if winner > mostPoints:
                 mostPoints = winner
-            
             self.reset()
             
         if not self.verbose:
-            #print(winningPoints)
             self.avg = mean(winningPoints)
             self.dev = stddev(winningPoints)
             #print("Avg:",self.avg)
             #print("Std Dev:",self.dev)
             #print("Most points:",mostPoints)
             print("Iteration Complete")
+

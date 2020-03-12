@@ -56,11 +56,11 @@ def stddev(x):
 def listProduct(x,y):
     return sum(i[0]*i[1] for i in zip(x,y))
 
-def plotFigure(data,stepsize):
-    steps = [stepsize*i for i in range(25)]
+def plotFigure(data,stepsize,epochs):
+    steps = [stepsize*i for i in range(epochs)]
     plt.plot(steps,data)
-    plt.plot((0,stepsize*25),(87.074,87.074))
-    plt.axis([0, stepsize*25, min(data), max(data)])
+    plt.plot((0,stepsize*epochs),(87.074,87.074))
+    plt.axis([0, stepsize*epochs, min(data), max(data)])
     plt.show()
     
 #####################################################
@@ -87,35 +87,21 @@ def plotFigure(data,stepsize):
 
 teams = []
 averages = []
-stepsize = 0.004
+stepsize = 0.2
+epochs = 15
 
-# Populate league
-#while(True):
-#    isCustomTeam = input("Add your own team? (y/n) ")
-#    if isCustomTeam == "y":
-#        for i in range(19):
-#            teams.append(Team('teamdata/team{0}.txt'.format(i)))
-#        teams.append(Team())
-#        break
-#    elif isCustomTeam == "n":
-#        for i in range(20):
-#            teams.append(Team('teamdata/team{0}.txt'.format(i)))
-#        break
-#    else:
-#        print("Not a valid response")
-        
+# Populate league   
 for i in range(20):
     teams.append(Team('teamdata/team{0}.txt'.format(i)))
     
 
-
 # Run multiple leagues with varying team rating parameters
-#for i in range(25):
-prem = League('Premier League',teams,teamDeltaFactor=3)
-#    prem = League('Premier League',teams,teamDeltaFactor=0.0 + (stepsize * i),numIterations=1)
+#for i in range(epochs):
+#    prem = League('Premier League',teams,numIterations=20,teamDeltaFactor=stepsize*i,verbose=False)
+##    prem = League('Premier League',teams,teamDeltaFactor=0.0 + (stepsize * i),numIterations=1)
 #    averages.append(prem.avg)
-#plotFigure(averages,stepsize)
-    
+#plotFigure(averages,stepsize,epochs)
+prem = League('Premier League',teams,teamDeltaFactor=3.0,verbose=True)
 #Match(teams[10],teams[19],verbose=True)
 
 

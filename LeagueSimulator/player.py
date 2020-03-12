@@ -32,14 +32,13 @@ class Player:
     
     def formatAttributes(self,attributes):
         attributes = attributes.split(' ')
-        #adjustedAttributes = []
         for i in range(len(attributes)):
             attributes[i] = float(attributes[i]) * positionMultipliers[self.position][i]
         return attributes
     
     def scoreGoal(self):
         self.goals += 1
-        self.goalProbability *= random.uniform(1.01, 1.04)
+        self.goalProbability *= random.uniform(1.005, 1.022)
         
 # Attribute multipliers based on position
 positionMultipliers = {
